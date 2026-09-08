@@ -1,32 +1,28 @@
 # CS2043 Operating Systems
 
-Central repository organization for academic coursework, kernel-level development, laboratory practicals, and weekly notes for CS2043 Operating Systems at the Department of Computer Science and Engineering, University of Moratuwa.
+Central repository organization for academic coursework, kernel-level systems development, laboratory practicals, and weekly study notes for CS2043 Operating Systems at the Department of Computer Science and Engineering, University of Moratuwa.
 
 ## Organization Repositories
 
-### Course Notes
-- [CS2043-Weekly-Notes](https://github.com/CS2043-Operating-Systems/CS2043-Weekly-Notes): Comprehensive weekly lecture notes covering OS architecture, processes, threads, CPU scheduling, synchronization, and memory management.
+### Theoretical Foundations & Lecture Synthesis
+- [CS2043-Weekly-Notes](https://github.com/CS2043-Operating-Systems/CS2043-Weekly-Notes): Comprehensive weekly lecture notes covering operating system architectures, processes, kernel threads, CPU scheduling algorithms, synchronization primitives, and memory virtualization.
 
-### Practical & Kernel Development Hub
-- [pintos-cs2043](https://github.com/CS2043-Operating-Systems/pintos-cs2043): Central instructional operating system repository for all CS2043 laboratory milestones and kernel projects, structured through dedicated feature branches:
-  - **Lab 0**: Boot sequence and kernel interactive shell (`lab01-interactive-shell`)
-  - **Lab 1**: Thread sleep via blocking, priority scheduling, priority donation, and MLFQS (`project1-alarm-clock`)
-  - **Lab 2**: User programs, process execution, and system call boundaries (`lab02-user-programs`)
-  - **Lab 3**: Virtual memory, demand paging, frame allocation, and swap (`lab03-virtual-memory`)
-  - **Lab 4**: File systems, indexed inodes, buffer cache, and directory hierarchy (`lab04-file-systems`)
+### Instructional Kernel Laboratory Repositories
+- [pintos-lab-00](https://github.com/CS2043-Operating-Systems/pintos-lab-00): **Lab 0 — Getting Real: Boot, GDB & Kernel Monitor**. Complete boot path tracing (BIOS `0x7C00`, `loader.S`, `start.S` real-to-protected mode transition, temporary paging, and `pintos_init()`), remote GDB debugging over QEMU stub, and Ring 0 interactive kernel monitor supporting standard and extended commands (`whoami`, `shutdown`, `time`, `ram`, `thread`, `priority`, `exit`).
+- [pintos-lab-01](https://github.com/CS2043-Operating-Systems/pintos-lab-01): **Lab 1 — Threads: Alarm Clock, Priority Scheduling & MLFQS**. Timer sleep by thread blocking, priority-based scheduling, priority donation for nested synchronization, and multi-level feedback queue scheduling.
+- *Upcoming Milestones*: Separate repositories will be provisioned for Lab 2 (User Programs & System Calls), Lab 3 (Virtual Memory & Demand Paging), and Lab 4 (File Systems & Buffer Cache).
 
-### Organization Workspace
+### Environment & Toolchain Infrastructure
+- [pintos-wsl](https://github.com/shashika-mora/pintos-wsl): Canonical setup and verification guide for building and running 32-bit x86 Pintos on Windows 11 using WSL2, Ubuntu 26.04 LTS, GCC multilib, and QEMU, featuring comprehensive diagnostics for common toolchain issues.
+
+### Workspace Configuration
 - [.github](https://github.com/CS2043-Operating-Systems/.github): Organization profile and workspace configuration.
-
-## Module Documentation
-
-Weekly learning notes are structured through Notion and maintained in GitHub for version-controlled, durable reference. Topics focus on core operating system abstractions, concurrency control, resource allocation, and practical kernel-level implementation.
 
 ## Engineering & Git Standards
 
-- **Commit Conventions**: All commits adhere to Conventional Commits format (`feat:`, `fix:`, `docs:`, `chore:`, `refactor:`).
-- **Branching Workflow**: Milestones and laboratory assignments branch from prior stable baselines (`lab01-...`, `project1-...`) rather than creating fragmented repositories.
-- **Code Quality**: Kernel C implementations maintain strict formatting standards, clean build configs, and automated test suite verification.
+- **Commit Conventions**: All commits strictly adhere to the Conventional Commits specification (`feat:`, `fix:`, `docs:`, `chore:`, `refactor:`).
+- **Repository Isolation**: Each laboratory milestone operates in an isolated repository branched from its preceding verified baseline, maintaining clean commit histories and focused documentation.
+- **Verification**: Kernel changes are verified through automated test suites executed in the build directory (`make check`) and manual verification runs under QEMU.
 
 ## Academic Context
 
