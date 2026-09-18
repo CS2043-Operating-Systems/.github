@@ -1,11 +1,8 @@
 # CS2043 Operating Systems
 
-Central repository organization for academic coursework, kernel-level systems development, laboratory practicals, and weekly study notes for CS2043 Operating Systems at the Department of Computer Science and Engineering, University of Moratuwa.
+Central repository organization for academic coursework, kernel-level systems development, and laboratory practicals for CS2043 Operating Systems at the Department of Computer Science and Engineering, University of Moratuwa.
 
 ## Organization Repositories
-
-### Theoretical Foundations & Lecture Synthesis
-- [CS2043-Weekly-Notes](https://github.com/CS2043-Operating-Systems/CS2043-Weekly-Notes): Comprehensive weekly lecture notes covering operating system architectures, processes, kernel threads, CPU scheduling algorithms, synchronization primitives, and memory virtualization.
 
 ### Instructional Kernel Laboratory Repositories
 - [pintos-lab-00](https://github.com/CS2043-Operating-Systems/pintos-lab-00): **Lab 0 — Getting Real: Boot, GDB & Kernel Monitor**. Complete boot path tracing (BIOS `0x7C00`, `loader.S`, `start.S` real-to-protected mode transition, temporary paging, and `pintos_init()`), remote GDB debugging over QEMU stub, and Ring 0 interactive kernel monitor supporting standard and extended commands (`whoami`, `shutdown`, `time`, `ram`, `thread`, `priority`, `exit`).
